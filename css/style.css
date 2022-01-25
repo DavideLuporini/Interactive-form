@@ -1,40 +1,61 @@
 body {
     /* todo  inserire uno sfondo*/
-    background-image: url(../img/edeaf13bee5883ec6b8f129160cff0a8.jpg);
+    background-image: url(../img/logo_default.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: end;
+    background-position: center;
+    background-size: 100%;
     font-family: Roboto, Arial, Georgia, "Times New Roman";
-    height: 100vh;
-}
-
-.container-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#floatingPassword {
-    background-color: rgba(152, 150, 150, 0.571);
+    background-color: red;
 }
 
 
-/* 
-form style */
+/* utilities */
 
-form {
-    background-color: rgba(135, 9, 9, 0.864);
+
+/* text colors */
+
+.text-label {
+    color: rgba(135, 9, 9, 1);
+}
+
+
+/* font size */
+
+.fs-14px {
+    font-size: 12px;
+}
+
+
+/* form style */
+
+#data-form {
+    background-color: white;
     border-radius: 25px;
-    border: black 5px solid;
+    border: rgb(171, 16, 16) 5px solid;
     padding: 25px;
-    margin-top: 50px;
+    margin-top: 64px;
+    font-size: 12px;
 }
 
 
 /* titolo */
 
 #form-title {
-    color: whitesmoke;
+    color: rgb(209, 22, 22);
+}
+
+
+/* corpo del form */
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#floatingPassword {
+    background-color: rgba(152, 150, 150, 0.571);
 }
 
 
@@ -45,11 +66,4 @@ form {
     border-color: rgba(152, 150, 150, 0.571);
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(152, 150, 150, 25%);
-}
-
-@media screen and (max-width: 768px) {
-    /* For mobile phones: */
-    .container-sm {
-        width: 100%;
-    }
 }
