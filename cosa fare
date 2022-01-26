@@ -1,0 +1,151 @@
+che campi inserire?
+titolo  : Consulenza personalizzata Generali titolo invariato
+nome
+cognome
+numero di telefono
+mail
+data di nascina
+Comune di residenza: menù a tendina
+Fonte di reddito principale: mt
+    autonomo
+    dipendente 
+    altro
+    disoccupato
+    part time
+se in fonte di reddito principale  === disoccupato, mi disabilita area professione
+
+Area di lavoro mt
+Privato
+pubblico
+
+professione : menù a tendina
+
+impiegato
+operaio
+avvocato
+commerciante
+dirigente
+imprenditore
+altra attuvita professionale
+
+
+se il cliente clicca da avvocato in giù
+il campo di fonte di reddito principale sia autonomo
+
+stato civile: mt
+
+coniugato/a
+convivente
+divorziato
+libero/a di stato
+nubile/celibe
+vedovo/a
+
+Sesso Maschio / femmina
+
+pagina 1 -  fine
+
+<!-- pagina 2 -->
+
+se lui ha messo  coniugato o convivente && maschio = età moglie fonte di reddito principale area e professione
+se lui ha messo  coniugato o convivente && femmina = età marito fonte di reddito principale area e professione
+
+se è disoccupato , sparisce.
+
+pagina 3:
+
+nucleo familiare : mt
+
+placeholder da 1 a 20 menù a tendina
+
+Figli : si no
+
+compare numero figli per forza un numero , menù a tendina
+
+età figli: in base al numero dei figli max 5
+
+
+il label deve avere come contenuto età figlio 1 2 3 4 5 
+
+quanti figli sono studenti? prendi il range del numero figli
+
+costo medio annuo dei figli? in euro
+
+Pagina 4
+
+Casa , di proprità o in affitto :
+
+se clicca di proprietà , esce menù a tendina ( hai in attivo un mutuo) , non compare se clicca in affitto.
+
+ho altre abitazioni di proprietà: si no 
+
+ho impegni finanziari attuali ( mutui , finanziamenti ecc) menù a tendina : no , fino a 1000 euro annui , ad 1001 a 5000 superiore a 5001 euro annui;
+
+la mia consistenza patrimoniale : mt : inferiore a 50.000 , fino a 150 ,  fino a 500 , oltre 500
+
+il mio reddito annuale è del seguente ammonate : mt : fino a 20000 , da 20001 a 50k o 50 100 , oltre i 100
+
+ultima pagina , grosso del lavoro
+
+
+campo 1 di pagina 5
+
+indicare i bisogni          vorrei : bisogni assicurativi , un aiuto a stabilire le mie priorità assicurative
+
+
+
+se lui clicca aiuto :
+
+fase di elaborazione e la risposta:
+
+bisogni assicurativi : menù dove selezionare  ok , campi da selezionare , tipi di polizza  vedi punto 12 appunti matteo
+
+quando seleziono questi , il programma dovrebbe a schedare un resoconto
+
+cliente , dargli un messaggio per essere contattato
+
+
+ un aiuto a stabilire le mie priorità assicurative risultato della consulenza
+
+
+
+
+
+
+
+
+
+
+
+Appunti progetto
+1) Cambiare 'Residenza', con una selection list
+
+2) 'Tipo lavoro' diventa 'Fonte di reddito principale'. Aggiungere nella lista anche 'disoccupato, part-
+time e altro'. Spostare questa voce prima di 'Professione'
+
+3) Aggiungere campo 'Area' con selection list 'Pubblico o privato'
+4) Mettere professione dopo queste voci. Inserire una selection list con 'impiegato operaio avvocato
+commerciante dirigente imprenditore e altro.
+5) Se disoccupato tutto ciò che viene elencato sotto deve essere disabilitato. Controllo che se è
+avvocato commerciante imprenditore o dirigente allora deve essere autonomo, sennò il contrario.
+6) Stato civile deve avere dentro 'coniugato/a convivente divorziato/a separato/a libera di stato nubile
+celibe vedovo/a
+7) La prima pagine finisce a sesso.
+
+7) Pagina 2 Se Sposato e maschio allora la pagina deve avere tutti i campi inerenti alla moglie. In
+aggiunta inserire per quanto riguarda le professione tutto ciò detto sopra
+8) Pagina 3 Iniziare con 'Nucleo familiare' (e inserire con placeholdere 'es 1-20) poi mettere da 'Figli'
+In poi. Levando 'Professione figli' e mettere 'Quanti figli studenti hai?'(sempre placeholder 1-20) e
+'Costo medio annuo figli in euro'.
+9) Pagina 4 Inserire 'Abitazione principale è: ' e mettere selection con 'di proprietà o affito o altro', poi
+'Ho altre abitazione di proprietà: ' e mettere selection con 'si o no'. Poi ho 'Ho impegni finanziari
+annuali(mutui, finanziamenti, ecc):' selection list ' no, fino a 1000 annui, da 1000 a 5000 annui,
+superiore a 5000 annui'. Poi mettere che sono già fatti 'consistenza patrimoniale' e ' reddito annuo'.
+10) Se barra la casella di proprietà bisogna chiedere se ha ottenuto un mutuo quindi userei
+sempre il disable.
+11) Pagina 5 mettere il campo 'I miei bisogni'
+12) Se seleziona 'vorrei indicare...' allora deve aprire un menù a flag in cui deve spuntare una o
+più possibili richieste tra cui: polizza sulla vita, polizza infortuni, polizza sanitaria, polizza sulla
+casa, polizza sulla non auto sufficiente, fondo pensione, piano di risparmio, piano di investimento,
+polizza sull'attività.
+13) Nell'altra opzione devono essere elaborati dei dati da fare nel post
