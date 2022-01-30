@@ -38,6 +38,36 @@ body {
     max-width: 450px;
 }
 
+#data-form-2 {
+    background-color: white;
+    border-radius: 25px;
+    border: rgb(171, 16, 16) 5px solid;
+    padding: 25px;
+    margin-top: 64px;
+    font-size: 12px;
+    max-width: 450px;
+}
+
+#data-form-3 {
+    background-color: white;
+    border-radius: 25px;
+    border: rgb(171, 16, 16) 5px solid;
+    padding: 25px;
+    margin-top: 64px;
+    font-size: 12px;
+    max-width: 450px;
+}
+
+#data-form-4 {
+    background-color: white;
+    border-radius: 25px;
+    border: rgb(171, 16, 16) 5px solid;
+    padding: 25px;
+    margin-top: 64px;
+    font-size: 12px;
+    max-width: 450px;
+}
+
 
 /* titolo */
 

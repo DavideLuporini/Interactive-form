@@ -44,7 +44,8 @@
         <div class="container-form">
             <div class="row">
                 <div class="col">
-                    <form id="data-form">
+                    <!-- form 1 -->
+                    <div id="data-form">
                         <h1 id="form-title" class="h1 text-uppercase text-center mb-5">
                             Consulenza personalizzata Generali
                         </h1>
@@ -182,18 +183,18 @@
                         </div>
                         <div class="col-12 mb-3">
                             <label class=" col-form-label text-label fs-14px" for="inlineFormSelectPref">Fonte di reddito principale</label>
-                            <select class="form-select" id="inlineFormSelectPref">
+                            <select class="form-select" id="reddito-1">
                                 <option value="null" selected>Fonte di reddito principale...</option>
                                 <option value="autonomo">autonomo</option>
                                 <option value="dipendente">dipendente</option>
                                 <option value="part-time">part time</option>
                                 <option value="disoccupato">disoccupato</option>
                                 <option value="altro">altro</option>
-                            s</select>
+                            </select>
                         </div>
-                        <div class="col-12 mb-3">
+                        <div class="col-12 mb-3" id="hide-element">
                             <label class=" col-form-label text-label fs-14px" for="inlineFormSelectPref">Professione</label>
-                            <select class="form-select" id="inlineFormSelectPref">
+                            <select class="form-select" id="fontedireddito1">
                                     <option value="null" selected>Professione...</option>
                                     <option value="impiegato">impiegato</option>
                                     <option value="operaio">operaio</option>
@@ -207,17 +208,19 @@
                         </div>
                         <div class="col-12 mb-3">
                             <label class=" col-form-label text-label fs-14px" for="inlineFormSelectPref">Stato civile</label>
-                            <select class="form-select" id="inlineFormSelectPref">
+                            <select class="form-select" id="statocivile">
                                         <option value="null" selected>Stato civile...</option>
                                         <option value="coniugato">coniugato/a</option>
                                         <option value="convivente">convivente</option>
                                         <option value="divorziato">divorziato</option>
                                         <option value="libero">libero/a di stato</option>
-                                        <option value="dirigente">dirigente</option>
                                         <option value="nubile-celibe">nubile/celibe</option>
                                         <option value="vedovo">vedovo/a</option>
                                     </div>
-                            <legend class="col-form-label col-sm-12 pt-0">Qual è il tuo sesso?</legend>
+                            <legend 
+                            class="col-form-label col-sm-12 pt-0">Qual è il tuo sesso?
+
+                            </legend>
                             <div class="col-sm-12">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
@@ -239,88 +242,195 @@
                                 </div>
                                 <div class="d-flex justify-content-around pt-5">
                                     <button type="submit" class="btn btn-dark" disabled>torna indietro</button>
-                                    <button type="submit" class="btn btn-dark">Successiva</button>
+                                    <button id="button-next" type="submit" class="btn btn-dark">Successiva</button>
                                 </div>
                             </div>
-                        
-                        <!-- <div class="row">
-                        </div>
-                        <div class="row ">
-                            <div class="col-12 mb-3">
-                                <label class=" col-form-label text-label " for="inlineFormSelectPref">Stato civile...</label>
-                                <select class="form-select" id="inlineFormSelectPref">
-                                    <option selected>Stato civile...</option>
-                                    <option value="1">Coniugato/a</option>
-                                    <option value="2">Sposato/a</option>
-                                    <option value="3">Divoriato/a</option>
-                                  <option value="4">Nubile</option>
-                                  <option value="4">Vedovo/a</option>
-                                </select>
-                        </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 mb-3">
-                        <label class=" col-form-label text-label " for="inlineFormSelectPref">Tipo di lavoro/Fonte di reddito principale</label>
-                        <select class="form-select" id="inlineFormSelectPref">
-                                  <option selected>qual è la tua fonta di reddito principale...</option>
-                                  <option value="1">Autonomo</option>
-                                  <option value="2">Dipendente pubblico</option>
-                                  <option value="3">Dipendente privato</option>
-                                  <option value="4">Disoccupato</option>
-                                </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 mb-3">
-                        <label class=" col-form-label text-label " for="inlineFormSelectPref">Tipo di lavoro/Fonte di reddito principale</label>
-                        <select class="form-select" id="inlineFormSelectPref">
-                                  <option selected>qual è la tua fonta di reddito principale...</option>
-                                  <option value="1">Autonomo</option>
-                                  <option value="2">Dipendente pubblico</option>
-                                  <option value="3">Dipendente privato</option>
-                                  <option value="4">Disoccupato</option>
-                                </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 mb-3">
-                        <label class=" col-form-label text-label " for="inlineFormSelectPref">Tipo di lavoro/Fonte di reddito principale</label>
-                        <select class="form-select" id="inlineFormSelectPref">
-                                  <option selected>qual è la tua fonta di reddito principale...</option>
-                                  <option value="figlio1">Autonomo</option>
-                                  <option value="2">Dipendente pubblico</option>
-                                  <option value="3">Dipendente privato</option>
-                                  <option value="4">Disoccupato</option>
-                                </select>
-                    </div>
-                </div>
-                <fieldset class="row">
-                    <legend class="col-form-label col-sm-12 pt-0">Qual è il tuo sesso?</legend>
-                    <div class="col-sm-12">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                            <label class="form-check-label" for="gridRadios1">
-                        preferisco non specificare
-                      </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                            <label class="form-check-label" for="gridRadios2">
-                        Maschio
-                      </label>
-                        </div>
-                        <div class="form-check">
-                            <input onclick="myFunction()" class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                            <label class="form-check-label" for="gridRadios3">
-                        Femmina
-                      </label>
                         </div>
                     </div>
-                </fieldset>
-                -->
-                </form>
-            </div>
-        </div>
+
+
+
+                    <!-- form 2 -->
+                    <!-- ! da inserire costrutto logico in js :-->
+                    <!-- 1) Inserire nel testo coniuge o convivente in relazione alla selezione -->
+                    <!-- nel caso in cui selezioni single , passare a pagina 3 -->
+
+                    <div id="data-form-2" class="d-none">
+                        <h1 id="form-title" class="h1 text-uppercase text-center mb-5">
+                            Consulenza personalizzata Generali
+                        </h1>
+                        <div class="col-12 mb-3">
+                            <label class=" col-form-label text-label fs-14px" for="inlineFormSelectPref">Fonte di reddito principale</label>
+                            <select  class="form-select" id="fontedireddito">
+                                <option value="null" selected>Fonte di reddito principale...</option>
+                                <option value="autonomo">autonomo</option>
+                                <option value="dipendente">dipendente</option>
+                                <option value="part-time">part time</option>
+                                <option value="disoccupato">disoccupato</option>
+                                <option value="altro">altro</option>
+                            </select>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label class=" col-form-label text-label fs-14px" for="inlineFormSelectPref">Professione</label>
+                            <select class="form-select" id="professione-2-none">
+                                    <option value="null" selected>Professione...</option>
+                                    <option value="impiegato">impiegato</option>
+                                    <option value="operaio">operaio</option>
+                                    <option value="avvocato">avvocato</option>
+                                    <option value="commerciante">commerciante</option>
+                                    <option value="dirigente">dirigente</option>
+                                    <option value="imprenditore">imprenditore</option>
+                                    <option value="other-activitie">altra attività professionale</option>
+                                    <option value="altro">altro</option>
+                            </select>
+                        </div>
+                        <div class="d-flex justify-content-around pt-5">
+                            <button id="button previous-2" type="submit" class="btn btn-dark">torna indietro</button>
+                            <button id="button-next-2" type="submit" class="btn btn-dark">Successiva</button>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                    <!-- form 3 -->
+                    <!-- ! da inserire costrutto logico in js :-->
+                    <!-- 1) Inserire nel testo coniuge o convivente in relazione alla selezione fatto -->
+                    <!-- nel caso in cui selezioni single , passare a pagina 3 -->
+                    <div id="data-form-3" class="d-none">
+                        <h1 id="form-title" class="h1 text-uppercase text-center mb-5">
+                            Consulenza personalizzata Generali
+                        </h1>
+                        <div class="col-12 mb-3">
+                            <label class=" col-form-label text-label fs-14px" for="inlineFormSelectPref">Professione</label>
+                            <select class="form-select" id="nucleo-familiare">
+                                    <option value="null" selected>Selezione il numero di componenti del tuo nucleo familiare</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    
+                            </select>
+                        </div>
+
+                        <legend class="col-form-label col-sm-12 pt-0">hai figli?
+
+                        </legend>
+                        <div class="col-sm-12">
+                            <select class="form-select" id="getSon">
+                                <option value="null" selected>....</option>
+                                <option value="si">si</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 d-none" id="hideson">
+                            <label class="mt-4"> Quanti figli hai?</label>
+                            <select class="form-select" id="n-figli">
+                                <option value="null" selected>Quanti figli hai?</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5+">5</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 d-none" id="age-son">
+                            <div id="age-son-display"></div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="d-flex justify-content-around pt-5">
+                                <button type="submit" class="btn btn-dark" disabled>torna indietro</button>
+                                <button id="button-next-3" type="submit" class="btn btn-dark">Successiva</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- form 3 -->
+                    <!-- ! da inserire costrutto logico in js :-->
+                    <!-- 1) Inserire nel testo coniuge o convivente in relazione alla selezione fatto -->
+                    <!-- nel caso in cui selezioni single , passare a pagina 3 -->
+
+                    <div id="data-form-4" class="d-none">
+                        <h1 id="form-title" class="h1 text-uppercase text-center mb-5">
+                            Consulenza personalizzata Generali
+                        </h1>
+                        <div class="col-12 mb-3">
+                            <label class=" col-form-label text-label fs-14px" for="inlineFormSelectPref">casa</label>
+                            <select class="form-select" id="casa">
+                                    <option value="null" selected>Proprietà o affitto?</option>
+                                    <option value="proprietà">Casa di proprietà</option>
+                                    <option value="affitto">affitto</option>
+                                    
+                            </select>
+                        </div>
+
+                        <div class="col-sm-12 d-none" id="mutuo">
+                            <legend class="col-form-label col-sm-12 pt-0">hai un mutuo attivo?
+                            </legend>
+                            <select class="form-select ">
+                                <option value="null" selected>....</option>
+                                <option value="si">si</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+                        <legend class="col-form-label col-sm-12 pt-0">hai altri impegni finanziari attuali?
+                        </legend>
+                        <div class="col-sm-12">
+                            <select class="form-select" id="impegni-finanziari">
+                                <option value="null" selected> no</option>
+                                <option value="1000">fino a 1000 euro annui</option>
+                                <option value="1001-5000">da 1001 a 5000</option>
+                                <option value="5001+">5001+ euro annui</option>
+                            </select>
+                        </div>
+                        <legend class="col-form-label col-sm-12 pt-0">La mia consistenza patrimoniale è:
+                        </legend>
+                        <div class="col-sm-12">
+                            <select class="form-select" id="patrimonio">
+                                <option value="null" selected>...</option>
+                                <option value="50000">inferiore a 50.000</option>
+                                <option value="15000">fino a 150.000</option>
+                                <option value="500000">fino a 500.000</option>
+                                <option value="500000+">oltre i 500.000</option>
+                            </select>
+                        </div>
+                        <legend class="col-form-label col-sm-12 pt-0">il mio reddito annuale è:
+                        </legend>
+                        <div class="col-sm-12">
+                            <select class="form-select" id="reddito-annuale">
+                                <option value="null" selected>...</option>
+                                <option value="20">fino a 20.000</option>
+                                <option value="20-50">da 20.001 a 50.000</option>
+                                <option value="50-100">da 50.001 a 100.000</option>
+                                <option value="100000+">oltre i 100.000</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="d-flex justify-content-around pt-5">
+                                <button type="submit" class="btn btn-dark" disabled>torna indietro</button>
+                                <button id="button-next-4" type="submit" class="btn btn-dark">Successiva</button>
+                            </div>
+                        </div>
+                    </div>
 
     </section>
 
